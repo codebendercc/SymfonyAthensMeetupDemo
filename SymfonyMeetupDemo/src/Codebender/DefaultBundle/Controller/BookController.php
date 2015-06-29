@@ -35,7 +35,7 @@ class BookController extends Controller
         }
         catch(\Exception $e)
         {
-            return array('entities' => []);
+            return array('entities' => array());
         }
         
 
