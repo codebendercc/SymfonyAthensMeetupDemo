@@ -1,0 +1,63 @@
+language: php
+php:
+  - 5.3
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get upgrade
+
+before_script:
+  - cd SymfonyAthensMeetupDemo/SymfonyMeetupDemo/
+  - composer install
+  #- change parameters.yml config
+  - php app/console doctrine:database:create
+  - php app/console doctrine:schema:create
+
+script:
+  - bin/phpunit -c app
+
+notifications:
+  email:
+    recipients:
+      - tzikis@codebender.cc
+
+
+# language: php
+# php:
+#   - 5.5
+#   - 5.4
+#   - 5.3
+# 
+# env:
+#   global:
+#    # Email Password for Functional Tests
+#    - secure: "Mc6nXlMQZKRcaydChB5ubSQXhw3SXyN+XS5ztAWixOUlIoJWssdBKIpDW+1TOB7fcZ9pcUlRQN/RI7Wq/yz6uQcyQnSamxJ2p2pyZJpE9HI3EpUAvtmyjbtfLQQ1WAZBoQf9DsAXtbUnTFryn0MMNYpi2XO0E5OKmT37jLBzxSQ="
+#    # Xvfb display for casperjs with slimerjs
+#    - DISPLAY=:99.0
+#  matrix:
+#    - TEST_SUITE="UNIT"
+#    - TEST_SUITE="FUNCTIONAL"
+# 
+# install:
+#  - sudo apt-get update
+# before_install:
+#  - sudo apt-get install
+# 
+# before_script:
+#   - sudo chmod -R 777 app/cache app/logs
+# 
+# script:
+#   - phpunit -c app
+# 
+# after_script:
+#   - coveralls.sh
+# after_success:
+#   - epic_sax_guy.sh
+# after_failure:
+#   - sad_trombone.sh
+# 
+# notifications:
+#   irc: "chat.freenode.net#codebender.cc"
+#   email:
+#     recipients:
+#       - tzikis@codebender.cc
