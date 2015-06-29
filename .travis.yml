@@ -7,7 +7,7 @@ before_install:
 #   - sudo apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
 
 before_script:
-  - cd SymfonyAthensMeetupDemo/SymfonyMeetupDemo/
+  - cd SymfonyMeetupDemo/
   - composer install
   #- change parameters.yml config
   - php app/console doctrine:database:create
