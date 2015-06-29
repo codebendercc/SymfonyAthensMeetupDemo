@@ -1,1 +1,4 @@
-
+codebender_default:
+    resource: "@CodebenderDefaultBundle/Controller/"
+    type:     annotation
+    prefix:   /
