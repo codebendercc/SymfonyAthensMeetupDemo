@@ -1,11 +1,11 @@
 <?php
 
-namespace Codebender\DefaultBundle\Tests\Controller;
+//namespace Codebender\DefaultBundle\Tests\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+//use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class BookControllerTest extends WebTestCase
-{
+//class BookControllerTest extends WebTestCase
+//{
     /*
     public function testCompleteScenario()
     {
@@ -52,4 +52,4 @@ class BookControllerTest extends WebTestCase
     }
 
     */
-}
+//}
